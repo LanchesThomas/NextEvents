@@ -8,9 +8,9 @@ import Footer from '@/components/footer/footer';
 
 const Home: FC = () => {
     return (
-        <>
+        <div id="home" className='relative'>
             <Header pageName={'HomePage'} />
-            <main className="flex flex-col gap-7 my-10">
+            <main className="flex flex-col gap-7 py-10 pb-28">
                 {EventsData.map((event) => (
                     <Cards
                         id={event.id}
@@ -21,7 +21,7 @@ const Home: FC = () => {
                 ))}
             </main>
             <Footer />
-        </>
+        </div>
     );
 };
 
