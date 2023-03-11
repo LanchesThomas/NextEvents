@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+    text-decoration: none;
+}
+
+@layer components {
+    body {
+        @apply text-background;
+        @apply bg-white;
+    }
+
+    .header {
+        background-color: rgba(255, 255, 255, 1);
+        background-image: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(223, 254, 244, 1) 100%
+        );
+    }
+
+    .cards {
+        border-radius: 10px;
+    }
+
+    .cards:nth-child(odd) img {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .cards:nth-child(even) .cards__text {
+        text-align: end;
+    }
+
+    .cards:nth-child(even) {
+        flex-direction: row-reverse;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .cards:nth-child(even) img{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
