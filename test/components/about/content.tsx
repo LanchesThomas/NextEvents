@@ -3,7 +3,7 @@ import Team from './team';
 
 const Content = () => {
     return (
-        <main className="w-3/4 m-auto py-12 flex flex-col gap-8">
+        <main className="w-3/4 m-auto py-12 flex flex-col gap-8 mb-[69px]">
             <h1 className="text-3xl font-bold text-center">About Us</h1>
             <p>
                 Lorem ipsum dolor sit amet. Qui unde iure eos illo doloribus id

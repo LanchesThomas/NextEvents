@@ -12,7 +12,7 @@ interface Props {
 
 const Header = (props: Props) => {
     return (
-        <header className=" flex flex-col h-64 gap-8 header">
+        <header className=" flex flex-col h-64 gap-8 header border-b border-b-background">
             <div className="flex justify-between items-center w-3/4 m-auto ">
                 <Image width={50} height={50} src={Logo} alt="logo" />
                 <Nav />

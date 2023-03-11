@@ -8,7 +8,7 @@ const Nav = () => {
       <ul className='flex gap-8 list-none text-3xl '>
         <li><Link href='/'>Home</Link></li>
         <li><Link href='/about'>About</Link></li>
-        <li><Link href='/events'>Events</Link></li>
+        <li><Link href='/city'>City</Link></li>
       </ul>
     </nav>
     </div>

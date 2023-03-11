@@ -6,15 +6,21 @@ interface Props {
 
 const Events = (props: Props) => {
     return (
-        <div className="flex justify-around mt-7">
-            {EventsData[props.id - 1].events.map((event) => (
-                <div key={event.id} className="border-2 border-white h-full">
-                    <div style={{ height: '20%' }}>
-                        <h1 className="text-lg">{event.name}</h1>
+        <div className="flex justify-between m-auto mt-7 flex-wrap w-3/4 mb-[223px]">
+            {EventsData[props.id - 1].events.map((event, index, tab) => (
+                <div
+                    key={event.id}
+                    className={`border border-background rounded-lg w-${tab.length <= 2 ? '1/3' : '1/4'} h-80 box-content mb-7`}
+                >
+                    <div className="h-1/4 w-full flex flex-col justify-center items-center">
+                        <h1 className="text-2xl font-bold" >{event.name}</h1>
                         <h2 className="text-lg">{event.date}</h2>
                     </div>
-                    <div style={{ height: '80%' }}>
-                        <img src={event.img} className="object-cover h-full" />
+                    <div className="h-3/4 w-full">
+                        <img
+                            src={event.img}
+                            className="object-cover w-full h-full"
+                        />
                     </div>
                 </div>
             ))}

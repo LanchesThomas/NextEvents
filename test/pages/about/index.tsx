@@ -7,7 +7,7 @@ import React, { FC } from 'react';
 
 const About = () => {
     return (
-        <div id ="about" className='relative'>
+        <div id ="about" className=''>
             <Header pageName='About'/>
             <Content />
             <Footer />
