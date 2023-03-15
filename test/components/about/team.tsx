@@ -6,9 +6,10 @@ const Team = () => {
         <div className="flex justify-center gap-24">
             {TeamDatas.map((member) => (
                 <div className='flex flex-col items-center' key={member.id}>
-                    <img
+                    <Image
                         src={member.img}
                         width={96}
+                        height={96}
                         alt={`${member.name}-photo`}
                         className="rounded-full h-24 object-cover"
                     />

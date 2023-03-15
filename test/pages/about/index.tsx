@@ -7,8 +7,8 @@ import React, { FC } from 'react';
 
 const About = () => {
     return (
-        <div id ="about" className=''>
-            <Header pageName='About'/>
+        <div id ="about">
+            <Header/>
             <Content />
             <Footer />
         </div>

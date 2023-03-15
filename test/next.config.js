@@ -1,8 +1,11 @@
-const withRoutes = require("nextjs-routes/config")();
+
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: ['picsum.photos']
+  }
 }
 
-module.exports = withRoutes(nextConfig);
+module.exports = nextConfig

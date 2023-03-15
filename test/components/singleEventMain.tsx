@@ -1,13 +1,7 @@
 import { EventsData } from '@/data/event';
+import Image from 'next/image';
 import { NextRouter, useRouter } from 'next/router';
 import { FC } from 'react';
-
-interface SingleEventType {
-    id: number;
-    name: string;
-    date: string;
-    img: string;
-}
 
 const SingleEventMain: FC = () => {
     const router: NextRouter = useRouter();
@@ -23,11 +17,28 @@ const SingleEventMain: FC = () => {
     );
 
     if (SingleEventFind) {
-        const { id, name, date, img } = SingleEventFind;
+        const { name, date, img, desc } = SingleEventFind;
 
         return (
-            <main>
-                <p>{name}</p>
+            <main className='my-12'>
+                <div className='mb-12 w-1/3 m-auto'>
+                    <h1 className="text-4xl font-bold text-center">{name}</h1>
+                </div>
+                <div className="flex ">
+                    <div className="w-1/2 flex items-center justify-center">
+                        <Image
+                            width={800}
+                            height={500}
+                            src={img}
+                            alt={`${name}-image`}
+                            className="rounded-lg"
+                        />
+                    </div>
+                    <div className="w-1/2">
+                        <p>{date}</p>
+                        <p className='text-lg'>{desc}</p>
+                    </div>
+                </div>
             </main>
         );
     } else {

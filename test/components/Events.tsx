@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { CityType, EventsType } from '@/data/event';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Events: FC<CityType> = ({ EventsDataFind, location }) => {
     if (EventsDataFind) {
@@ -25,7 +26,10 @@ const Events: FC<CityType> = ({ EventsDataFind, location }) => {
                                 <h2 className="text-lg">{event.date}</h2>
                             </div>
                             <div className="h-3/4 w-full">
-                                <img
+                                <Image
+                                width={700}
+                                height={700}
+                                alt={`${event.name}-image`}
                                     src={event.img}
                                     className="object-cover w-full h-full"
                                 />

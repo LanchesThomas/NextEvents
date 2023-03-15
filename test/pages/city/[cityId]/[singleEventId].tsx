@@ -9,7 +9,7 @@ const SingleEvent = () => {
     <>
       <Header />
       <SingleEventMain />
-      <Footer />
+      
     </>
   )
 }

@@ -18,6 +18,8 @@ interface EventProps {
 const Event: FC<EventProps> = () => {
     const router: NextRouter = useRouter();
     const locationId = router.query.cityId?.toString().replace(/-/g, ' ');
+
+
     const EventsDataFind = EventsData.find(
         ({ location }) => location === locationId
     );
@@ -27,7 +29,7 @@ const Event: FC<EventProps> = () => {
             <Header />
             <Events
                 EventsDataFind={EventsDataFind}
-                location={locationId}
+                location={locationId ? locationId?.toString().replaceAll(' ', '-') : 'No Events Found'}
                 id={0}
                 date={''}
                 img={''}
