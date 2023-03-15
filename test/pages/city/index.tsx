@@ -6,13 +6,13 @@ import Footer from '@/components/footer/footer';
 
 const Events:FC = () => {
     return (
-        <main>
-            <Header pageName='City'/>
-            <div className='mb-[249px]'>
+        <>
+            <Header />
+            <main className='mb-[249px]'>
                 <City />
-            </div>
+            </main>
             <Footer />
-        </main>
+        </>
     );
 };
 

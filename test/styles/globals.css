@@ -40,8 +40,14 @@ a {
         border-bottom-right-radius: 10px;
     }
 
-    .cards:nth-child(even) img{
+    .cards:nth-child(even) img {
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
+    }
+
+    .desc {
+        max-width: 100%;
+        -webkit-line-clamp: 6;
+        overflow: hidden;
     }
 }

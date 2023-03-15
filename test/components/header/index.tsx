@@ -6,11 +6,8 @@ import Logo from '../../images/logo_black.png';
 import Image from 'next/image';
 import Desc from './desc';
 
-interface Props {
-    pageName: string;
-}
 
-const Header = (props: Props) => {
+const Header = () => {
     return (
         <header className=" flex flex-col h-64 gap-8 header border-b border-b-background">
             <div className="flex justify-between items-center w-3/4 m-auto ">

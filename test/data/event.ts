@@ -1,13 +1,14 @@
-interface CityType {
+export interface CityType {
     id: number;
-    location: string;
+    location?: string;
     date: string;
     img: string;
     desc: string;
-    events: EventsType[];
+    events: Array<EventsType>;
+    EventsDataFind?: CityType
 }
 
-interface EventsType {
+export interface EventsType {
     id: number;
     name: string;
     date: string;
@@ -41,7 +42,7 @@ const getTimes = () => {
 export const EventsData: CityType[] = [
     {
         id: 1,
-        location: 'New york',
+        location: 'New York',
         date: getTimes(),
         img: 'https://picsum.photos/900/899',
         desc: 'Lorem ipsum dolor sit amet. Quo saepe necessitatibus ut beatae officiis in error unde hic corrupti amet quo eaque neque. Ad eligendi labore ut adipisci obcaecati sit placeat deserunt non illo galisum est aspernatur quia. Est pariatur tenetur et molestiae praesentium cum velit accusantium.',

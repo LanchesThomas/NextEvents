@@ -8,8 +8,8 @@ import Footer from '@/components/footer/footer';
 
 const Home: FC = () => {
     return (
-        <div id="home" className='relative'>
-            <Header pageName={'HomePage'} />
+        <div id="home" className="relative">
+            <Header />
             <main className="flex flex-col gap-7 py-10 pb-28">
                 {EventsData.map((event) => (
                     <Cards
@@ -17,6 +17,7 @@ const Home: FC = () => {
                         location={event.location}
                         img={event.img}
                         desc={event.desc}
+                        key={event.id}
                     />
                 ))}
             </main>
